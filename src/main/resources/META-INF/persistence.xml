@@ -7,13 +7,13 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>ejercicio.model.Producto</class> <!-- Clase de entidad Producto -->
         <properties>
-            <!-- Conexión a la base de datos PostgreSQL -->
+   
             <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/inventario"/>
             <property name="jakarta.persistence.jdbc.user" value="postgres"/>
             <property name="jakarta.persistence.jdbc.password" value="190300"/>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
 
-            <!-- Configuraciones adicionales de Hibernate -->
+           
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/> <!-- Cambiar a "validate" o "none" en producción -->
         </properties>
