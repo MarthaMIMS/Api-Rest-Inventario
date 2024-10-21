@@ -5,7 +5,7 @@
              version="3.0">
     <persistence-unit name="ProductosPU">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>ejercicio.model.Producto</class> <!-- Clase de entidad Producto -->
+        <class>ejercicio.model.Producto</class> <!-- entidad Producto -->
         <properties>
    
             <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/inventario"/>
@@ -15,7 +15,7 @@
 
            
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/> <!-- Cambiar a "validate" o "none" en producción -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
         </properties>
     </persistence-unit>
 </persistence>
