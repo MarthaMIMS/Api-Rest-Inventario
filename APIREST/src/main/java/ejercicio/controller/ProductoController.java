@@ -17,7 +17,7 @@ public class ProductoController {
     @Inject
     private ProductoService productoService;
 
-    // Endpoint para listar productos con paginación y filtro
+    
     @GET
     public List<Producto> listarProductos(
             @QueryParam("offset") @DefaultValue("0") int offset,
@@ -27,14 +27,13 @@ public class ProductoController {
         return productoService.listarProductos(offset, limit, nombre, categoria);
     }
 
-    // Endpoint para crear producto
     @POST
     public Response crearProducto(Producto producto) {
         productoService.crearProducto(producto);
         return Response.status(Response.Status.CREATED).build();
     }
 
-    // Endpoint para actualizar producto
+
     @PUT
     @Path("/{id}")
     public Response actualizarProducto(@PathParam("id") int id, Producto producto) {
@@ -43,7 +42,7 @@ public class ProductoController {
         return Response.ok().build();
     }
 
-    // Endpoint para eliminar producto
+    
     @DELETE
     @Path("/{id}")
     public Response eliminarProducto(@PathParam("id") int id) {
@@ -51,7 +50,7 @@ public class ProductoController {
         return Response.noContent().build();
     }
 
-    // Endpoint para actualizar el stock de un producto
+    
     @PUT
     @Path("/{id}/stock")
     public Response actualizarStock(@PathParam("id") int id, @QueryParam("stock") int nuevoStock) {

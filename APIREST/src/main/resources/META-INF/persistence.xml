@@ -8,7 +8,7 @@
         <class>ejercicio.model.Producto</class> 
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/> <!-- O "validate" en producción -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/> 
         </properties>
     </persistence-unit>
 </persistence>
