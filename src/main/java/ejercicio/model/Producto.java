@@ -20,7 +20,7 @@ public class Producto {
     private int stock;
     private String categoria;
 
-    // Getters y Setters
+    
 
     public int getId() {
         return id;
